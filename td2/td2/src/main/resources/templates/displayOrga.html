@@ -1,0 +1,32 @@
+{{ >header}}
+<div class="container">
+	<div class="row">
+			<i class="fas fa-envelope fa-3x"></i>
+			<h2>Springboot TD n°2</h2>
+	</div>
+	<div class="row">
+		<div class="col">Application de messagerie</div>
+	</div><br>
+	<button type="button" class="btn btn-dark">
+		<a href="http://localhost:8091/orgas/new"><i class="fas fa-plus text-white"> Ajouter une organisation...</i></a>
+	</button>
+</div><br>
+	{{#orgaEdit}}
+		<a href="http://localhost:8091/orgas/index" class="btn btn-outline-dark"><i class="fas fa-times"> Fermer {{name}}</i></a>
+		<a href="http://localhost:8091/orgas/delete/{{idedit}}" class="btn btn-outline-danger"><i class="fas fa-times"> Supprimer {{name}}</i></a>
+		<a href="http://localhost:8091/orgas/edit/{{idedit}}" class="btn btn-outline-dark"><i class="fas fa-pen-square"> Modifier {{name}}</i></a>
+		<br><br><br>
+		<div class="border" style="border-width:1px !important;">Id : {{idedit}}</div>
+		<div class="border" style="border-width:1px !important;">Name : {{name}}</div>
+		<div class="border" style="border-width:1px !important;">Domain : {{domain}}</div>
+		<div class="border" style="border-width:1px !important;">Aliases : {{aliases}}</div>
+		<div class="border" style="border-width:1px !important;">
+		Groupes : {{#groupes}} 	<ul> <li>{{name}}</li></ul>	{{/groupes}}
+		
+		</div>
+		<div class="border" style="border-width:1px !important;">Organizationsettingss : </div>
+		<div class="border" style="border-width:1px !important;">
+			Users : {{#groupes}} {{#users}} {{firstname}}.{{lastname}} {{/users}} {{/groupes}}
+		</div>
+	{{/orgaEdit}}
+{{ >footer}}

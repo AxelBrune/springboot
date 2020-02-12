@@ -1,0 +1,25 @@
+{{>header}}
+<br><br><div class="row border" style="border-width:3px !important;">
+				<i class="fas fa-edit fa-3x"></i>
+				<h2>models\Organization</h2>
+				<p> Editing an existing project</p>
+	</div><br>
+	{{#orgaEdit}}
+		<form action="http://localhost:8091/orgas/index/{{id}}" method="POST">
+		  <div class="form-group">
+		    <label>Name</label>
+		    <input type="text" name="name" placeholder="Name" value="{{name}}">
+		  </div>
+		  <div class="form-group">
+		    <label>Domain</label>
+		    <input type="text" name="domain" placeholder="Domain" value="{{domain}}">
+		  </div>
+		  <div class="form-group">
+		    <label>Aliases</label>
+		    <input type="text" name="aliases" placeholder="Aliases" value="{{aliases}}">
+		  </div>
+		  <button type="submit" class="btn btn-success"><i class="fas fa-check-circle"> Validate</i></button>
+		  <button type="button" class="btn btn-secondary "><a href="http://localhost:8091/orgas/index" class="text-white"><i class="far fa-circle"> Cancel</i></a></button>
+		</form>
+	{{/orgaEdit}}
+{{>footer}}
