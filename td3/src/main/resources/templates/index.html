@@ -1,0 +1,16 @@
+{{>header}}
+	<div><%message%></div>
+	<input v-model="message">
+	<h1>Liste</h1>
+	<li v-for="name in orgas">
+    	 <%name.name%>&nbsp;<%name.domain%>&nbsp;<%name.aliases%> : 
+    	<%name%>
+  	</li>
+	
+	<h1>Organisations</h1> <v-btn rounded color="primary" dark>Ajouter une organisation</v-btn>
+		<v-data-table :headers="headers" :items="orgas" :items-per-page="5" class="elevation-1">
+						
+		</v-data-table>
+	
+{{>footer}}
+{{{vue}}}
