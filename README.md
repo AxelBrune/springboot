@@ -1,10 +1,6 @@
 # Débuts avec Spring
 Ce repository contient différents projets réalisés dans le cadre de ma deuxième année de DUT Informatique afin de débuter avec Springboot
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Pré-requis
 
 Afin de lancer les différents projet, vous aurez besoin de : 
@@ -12,7 +8,7 @@ Afin de lancer les différents projet, vous aurez besoin de :
 -JDK 8 : https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
 
 
-### Instalation
+### Installation
 Dans eclipse, faîtes un clic droit dans l'explorateur de fichiers :
 -Import
 -Existing Maven Projects
